@@ -1,9 +1,7 @@
-import ConfirmationClient from "./ConfirmationClient";
-
 export async function generateStaticParams() {
-  return [];
+  return [{ id: "_" }];
 }
 
-export default function ConfirmationPage() {
-  return <ConfirmationClient />;
+export default function ConfirmationRedirect() {
+  return null;
 }

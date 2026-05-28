@@ -85,7 +85,7 @@ export default function CommandePage() {
     }
 
     clearCart();
-    router.push(`/confirmation/${order.id}`);
+    router.push(`/confirmation?id=${order.id}`);
   };
 
   if (items.length === 0) {

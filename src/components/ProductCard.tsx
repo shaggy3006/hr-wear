@@ -14,7 +14,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
   return (
     <div className="bg-white border border-hr-border rounded-lg overflow-hidden group">
-      <Link href={`/produit/${product.slug}`}>
+      <Link href={`/produit?slug=${product.slug}`}>
         {/* Image */}
         <div className="relative h-48 bg-hr-warm flex items-center justify-center overflow-hidden">
           {product.images?.[0] ? (
@@ -47,7 +47,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
       {/* Info */}
       <div className="p-3">
-        <Link href={`/produit/${product.slug}`}>
+        <Link href={`/produit?slug=${product.slug}`}>
           <p className="text-xs font-medium text-hr-dark tracking-wide hover:text-hr-brown truncate">
             {product.name}
           </p>

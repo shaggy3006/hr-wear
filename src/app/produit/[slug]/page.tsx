@@ -1,9 +1,7 @@
-import ProductClient from "./ProductClient";
-
 export async function generateStaticParams() {
-  return [];
+  return [{ slug: "_" }];
 }
 
-export default function ProductPage() {
-  return <ProductClient />;
+export default function ProductRedirect() {
+  return null;
 }
