@@ -25,7 +25,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
   useEffect(() => {
     const supabase = createClient();
-    supabase.auth.getSession().then(({ data: { session } }) => {
+    supabase.auth.getSession().then(({ data }: { data: { session: any } }) => {
+      const session = data.session;
       if (!session && pathname !== "/admin/login") {
         router.replace("/admin/login");
       }
